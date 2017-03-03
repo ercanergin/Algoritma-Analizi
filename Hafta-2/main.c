@@ -1,24 +1,34 @@
-#include<stdio.h>
-#include<conio.h>
-int us(int x,int y){  
-  int i,a=1;
-  for(i=1;i<=y;i++){ 
-     a=a*x;             
-} 
-return a;
-   
+#include <stdio.h>
+#include <stdlib.h>
+
+int x;
+unsigned int y;
+
+
+
+int usAl(int x, unsigned int y)
+{
+    int sonuc = 1;
+    while (y > 0)
+    {
+        if (y & 1){
+            sonuc = sonuc*x;
+            }
+        y = y/2;
+        x = x*x;
+    }
+    return sonuc;
 }
-int main()
-{  
-    int x,y,sonuc;
-   
-  printf("\nUs alma ");
-  printf("\n x = ");
-  scanf("%d",&x);
-  printf("\n y = ");
-  scanf("%d",&y);   
-  sonuc=us(x,y);
-  printf("\n \n sonuc = %d ",sonuc); 
-   getch();
-   return 0;
+
+int main(int argc, char *argv[])
+{
+    printf("X sayisini giriniz : ");
+    scanf("%d",&x);
+    printf("Y sayisini giriniz : ");
+    scanf("%d",&y);
+    int sonuc = usAl(x,y);
+    printf("Sonuc : %d \n",sonuc);
+  
+  system("PAUSE");	
+  return 0;
 }
