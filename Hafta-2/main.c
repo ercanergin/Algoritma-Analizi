@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// Bu algoritmanın karmaşıklığı logn dir.
 
 int x;
 unsigned int y;
