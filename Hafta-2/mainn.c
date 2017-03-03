@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
+//Bu algoritmanın karmaşıklığı n dir.
 int us(int x,int y){  
   int i,a=1;
   for(i=1;i<=y;i++){ 
